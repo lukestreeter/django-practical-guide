@@ -19,10 +19,10 @@ monthly_challenges = {
 # Create your views here.
 
 
-        def monthly_challenge_by_number(request, month):
-          months = list(monthly_challenges.keys())
+def monthly_challenge_by_number(request, month):
+  months = list(monthly_challenges.keys())
 
-          if month > len(months):
+  if month > len(months):
       return HttpResponseNotFound("Invalid month")
 
   redirect_month = months[month - 1]
